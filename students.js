@@ -16,5 +16,6 @@ const availableFemaleNames = ['cecilia', 'ana', 'luisa', 'silvia', 'isabel', 'vi
 const availableGenders = ['male', 'female'];
 
 export const students = {
-  requirement1: () => console.table(list)
+  requirement1: () => console.table(list),
+  requirement2: () => console.log(`Hay ${list.length} alumnos en clase.`)
 };
