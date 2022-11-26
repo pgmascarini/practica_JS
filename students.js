@@ -17,5 +17,6 @@ const availableGenders = ['male', 'female'];
 
 export const students = {
   requirement1: () => console.table(list),
-  requirement2: () => console.log(`Hay ${list.length} alumnos en clase.`)
+  requirement2: () => console.log(`Hay ${list.length} alumnos en clase.`),
+  requirement3: () => list.forEach((item) => console.log(item.name)),
 };
