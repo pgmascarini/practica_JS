@@ -22,5 +22,6 @@ export const students = {
   requirement2: () => console.log(`Hay ${list.length} alumnos en clase.`),
   requirement3: () => list.forEach((item) => console.log(item.name)),
   requirement4: () => list.pop(),
-  requirement5: () => list.splice(utils.calculateRandomNumber(0, list.length), 1)
+  requirement5: () => list.splice(utils.calculateRandomNumber(0, list.length), 1),
+  requirement6: () => console.table(list.filter((item) => item.gender === 'female'))
 };
