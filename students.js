@@ -56,6 +56,11 @@ export const students = {
   requirement12: () => {
     const sum = list.reduce((accumulator, item) => (accumulator + item.age), 0);
     console.log(`La edad media de la clase es ${sum / list.length}`);
+  },
+  requirement13: () => {
+    const girls = list.filter((item) => item.gender === 'female');
+    const sum = girls.reduce((accumulator, item) => (accumulator + item.age), 0);
+    console.log(`La edad media de las chicas es ${sum / girls.length}`);
   }
 
 
