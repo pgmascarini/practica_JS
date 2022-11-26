@@ -1,6 +1,7 @@
 import readline from "readline";
 import { requirements } from "./requirements.js";
 import { utils } from "./utils.js";
+import { students } from "./students.js"
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -24,7 +25,11 @@ async function terminal() {
   do {
     console.table(requirements.list);
     answerFromConsole = await getAnswerFromConsole();
-
+    switch (Number.parseInt(answerFromConsole)) {
+      case 1:
+        students.requirement1();
+        break;
+    }
   } while (utils.isInt(answerFromConsole) && Number.parseInt(answerFromConsole) > 0 && Number.parseInt(answerFromConsole) <= requirements.length);
 }
 
