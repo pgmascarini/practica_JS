@@ -5,7 +5,7 @@ import { students } from "./students.js"
 
 const rl = readline.createInterface({
   input: process.stdin,
-  output: process.stdout,
+  output: process.stdout
 });
 
 function getAnswerFromConsole() {

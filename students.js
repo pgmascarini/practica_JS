@@ -15,7 +15,6 @@ const list = [{
 
 const availableMaleNames = ['pepe', 'juan', 'victor', 'Leo', 'francisco', 'carlos'];
 const availableFemaleNames = ['cecilia', 'ana', 'luisa', 'silvia', 'isabel', 'virginia'];
-const availableGenders = ['male', 'female'];
 
 export const students = {
   requirement1: () => console.table(list),
@@ -66,7 +65,4 @@ export const students = {
     list.forEach((item) => item.examScores.push(utils.calculateRandomNumber(0, 10)));
   },
   requirement15: () => list.sort((previous, next) => previous.name.localeCompare(next.name))
-
-
-
 };
