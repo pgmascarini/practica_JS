@@ -1,19 +1,6 @@
 import { utils } from "./utils.js"
 
-const list = [
-  {
-    age: 29,
-    examScores: [],
-    gender: 'female',
-    name: 'silvia'
-  }, 
-  {
-    age: 29,
-    examScores: [],
-    gender: 'female',
-    name: 'silvia'
-  }, 
-  {
+const list = [{
   age: 32,
   examScores: [],
   gender: 'male',
@@ -38,14 +25,19 @@ export const students = {
   requirement5: () => list.splice(utils.calculateRandomNumber(0, list.length), 1),
   requirement6: () => console.table(list.filter((item) => item.gender === 'female')),
   requirement7: () => {
-    const girls = list.filter((item) => item.gender === 'female'); 
+    const girls = list.filter((item) => item.gender === 'female');
     console.log(`Hay ${girls.length} chica(s). Hay ${list.length - girls.length} chico(s).`)
   },
   requirement8: () => {
     const boy = list.find((item) => item.gender === 'male');
     if (boy)
       console.log(false);
-    else 
+    else
       console.log(true);
-  }
+  },
+  requirement9: () => list.forEach((item) => {
+      if (item.age >= 20 && item.age <= 25)
+        console.log(item.name);
+    }),
+
 };
