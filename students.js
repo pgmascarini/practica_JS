@@ -36,9 +36,9 @@ export const students = {
       console.log(true);
   },
   requirement9: () => list.forEach((item) => {
-      if (item.age >= 20 && item.age <= 25)
-        console.log(item.name);
-    }),
+    if (item.age >= 20 && item.age <= 25)
+      console.log(item.name);
+  }),
   requirement10: () => {
     const people = [...availableMaleNames, ...availableFemaleNames];
     const index = utils.calculateRandomNumber(0, people.length - 1)
@@ -52,6 +52,10 @@ export const students = {
   requirement11: () => {
     const yongest = list.reduce((previous, current) => previous.age < current.age ? previous : current);
     console.log(yongest.name);
+  },
+  requirement12: () => {
+    const sum = list.reduce((accumulator, item) => (accumulator + item.age), 0);
+    console.log(`La edad media de la clase es ${sum / list.length}`);
   }
 
 
