@@ -35,6 +35,9 @@ async function terminal() {
       case 3:
         students.requirement3();
         break;
+      case 4:
+        students.requirement4();
+        break;
     }
   } while (utils.isInt(answerFromConsole) && Number.parseInt(answerFromConsole) > 0 && Number.parseInt(answerFromConsole) <= requirements.length);
 }
