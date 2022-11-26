@@ -23,5 +23,9 @@ export const students = {
   requirement3: () => list.forEach((item) => console.log(item.name)),
   requirement4: () => list.pop(),
   requirement5: () => list.splice(utils.calculateRandomNumber(0, list.length), 1),
-  requirement6: () => console.table(list.filter((item) => item.gender === 'female'))
+  requirement6: () => console.table(list.filter((item) => item.gender === 'female')),
+  requirement7: () => {
+    const girls = list.filter((item) => item.gender === 'female'); 
+    console.log(`Hay ${girls.length} chica(s). Hay ${list.length - girls.length} chico(s).`)
+  }
 };
