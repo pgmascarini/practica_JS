@@ -1,3 +1,5 @@
+import { utils } from "./utils.js"
+
 const list = [{
   age: 32,
   examScores: [],
@@ -19,5 +21,6 @@ export const students = {
   requirement1: () => console.table(list),
   requirement2: () => console.log(`Hay ${list.length} alumnos en clase.`),
   requirement3: () => list.forEach((item) => console.log(item.name)),
-  requirement4: () => list.pop()
+  requirement4: () => list.pop(),
+  requirement5: () => list.splice(utils.calculateRandomNumber(0, list.length), 1)
 };
