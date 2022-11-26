@@ -49,10 +49,11 @@ export const students = {
       name: people[index]
     })
   },
-  
+  requirement11: () => {
+    const yongest = list.reduce((previous, current) => previous.age < current.age ? previous : current);
+    console.log(yongest.name);
+  }
+
+
 
 };
-
-// nombre aleatorio.
-// género aleatorio.
-// listado de calificaciones vacío.
