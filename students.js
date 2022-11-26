@@ -61,6 +61,9 @@ export const students = {
     const girls = list.filter((item) => item.gender === 'female');
     const sum = girls.reduce((accumulator, item) => (accumulator + item.age), 0);
     console.log(`La edad media de las chicas es ${sum / girls.length}`);
+  },
+  requirement14: () => {
+    list.forEach((item) => item.examScores.push(utils.calculateRandomNumber(0, 10)));
   }
 
 
