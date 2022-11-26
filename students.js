@@ -22,7 +22,7 @@ export const students = {
   requirement2: () => console.log(`Hay ${list.length} alumnos en clase.`),
   requirement3: () => list.forEach((item) => console.log(item.name)),
   requirement4: () => list.pop(),
-  requirement5: () => list.splice(utils.calculateRandomNumber(0, list.length), 1),
+  requirement5: () => list.splice(utils.calculateRandomNumber(0, list.length - 1), 1),
   requirement6: () => console.table(list.filter((item) => item.gender === 'female')),
   requirement7: () => {
     const girls = list.filter((item) => item.gender === 'female');
@@ -39,5 +39,20 @@ export const students = {
       if (item.age >= 20 && item.age <= 25)
         console.log(item.name);
     }),
+  requirement10: () => {
+    const people = [...availableMaleNames, ...availableFemaleNames];
+    const index = utils.calculateRandomNumber(0, people.length - 1)
+    list.push({
+      age: utils.calculateRandomNumber(20, 50),
+      examScores: [],
+      gender: index < availableMaleNames.length ? 'male' : 'female',
+      name: people[index]
+    })
+  },
+  
 
 };
+
+// nombre aleatorio.
+// género aleatorio.
+// listado de calificaciones vacío.
