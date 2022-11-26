@@ -64,7 +64,8 @@ export const students = {
   },
   requirement14: () => {
     list.forEach((item) => item.examScores.push(utils.calculateRandomNumber(0, 10)));
-  }
+  },
+  requirement15: () => list.sort((previous, next) => previous.name.localeCompare(next.name))
 
 
 
