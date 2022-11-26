@@ -1,6 +1,19 @@
 import { utils } from "./utils.js"
 
-const list = [{
+const list = [
+  {
+    age: 29,
+    examScores: [],
+    gender: 'female',
+    name: 'silvia'
+  }, 
+  {
+    age: 29,
+    examScores: [],
+    gender: 'female',
+    name: 'silvia'
+  }, 
+  {
   age: 32,
   examScores: [],
   gender: 'male',
@@ -27,5 +40,12 @@ export const students = {
   requirement7: () => {
     const girls = list.filter((item) => item.gender === 'female'); 
     console.log(`Hay ${girls.length} chica(s). Hay ${list.length - girls.length} chico(s).`)
+  },
+  requirement8: () => {
+    const boy = list.find((item) => item.gender === 'male');
+    if (boy)
+      console.log(false);
+    else 
+      console.log(true);
   }
 };
